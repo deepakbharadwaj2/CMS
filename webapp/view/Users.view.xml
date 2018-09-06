@@ -1,0 +1,77 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	controllerName="sap.suite.ui.commons.demokit.tutorial.icecream.01.controller.Users">
+	<Page
+		title="{i18n>usersPageTitle}"
+		backgroundDesign="Solid">
+		<content>
+			<ComboBox selectionChange="onChange">
+				<core:Item key="Worklist" text="Worklist Manager" />
+				<core:Item key="Process" text="Process Manager" />
+				<core:Item key="Payment" text="Payment Manager" />
+				<core:Item key="System" text="System Manager" />
+			</ComboBox>
+			<Button text="Add User" icon="sap-icon://add-employee" class="sapUiSmallMarginBegin"></Button>
+		</content>
+		<Table id="tableId" 
+		width="auto" 
+		items="{/d/results}" 
+		growing="true"
+		growingScrollToLoad="true"
+		>
+			<headerToolbar>
+				<Toolbar>
+					<Title id="tableHeader"/>
+					<ToolbarSpacer/>
+				</Toolbar>
+			</headerToolbar>
+			<columns>
+				<Column id="SerialNumber">
+					<Text text="Sr.No."/>
+				</Column>
+				<Column id="UserName">
+					<Text text="Name"/>
+				</Column>
+				<Column>
+					<Text text="Mobile No."/>
+				</Column>
+				<Column>
+					<Text text="Email"/>
+				</Column>
+				<Column >
+					<Text text="Address"/>
+				</Column>
+				<Column >
+					<Text text="Designation"/>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem>
+					<cells>
+						<Text text="{SrNo}" id ="serialnumber"/>
+						<Text text="{Name}" id ="username"/>
+						<Text text="{MobileNo}" id ="mobilenumber"/>
+						<Text text="{Email}" id="emailid"/>
+						<Text text="{Address}" id="address"/>
+						<Text text="{Designation}" id="designation"/>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>-->
+		<footer>
+		  <Bar>
+		    <contentRight>
+		      <Button
+		        text="Save"
+		        press="onPressButton" />
+		        <Button
+		        text="Cancel"
+		        press="onPressButton" />
+		    </contentRight>
+		  </Bar>
+	</footer>
+	</Page>
+</mvc:View>

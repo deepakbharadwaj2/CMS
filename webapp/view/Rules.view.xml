@@ -1,0 +1,129 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	controllerName="sap.suite.ui.commons.demokit.tutorial.icecream.01.controller.Rules">
+	<Page
+		title="{i18n>rulesPageTitle}"
+		backgroundDesign="Solid">
+		<Table id="table" 
+		width="auto" 
+		growing="true"
+		growingScrollToLoad="true"
+		>
+			<headerToolbar>
+				<Toolbar>
+					<Title id="tableHeader"/>
+					<ToolbarSpacer/>
+				</Toolbar>
+			</headerToolbar>
+			<columns>
+				<Column id="SerialNumber" width="5rem">
+					<Text text="Sr.No." />
+				</Column>
+				<Column id="rule" width="10rem">
+					<Text text="Rule" class="Bold"/>
+				</Column>
+				<Column width="30rem">
+					<Text text="Rule Description" />
+				</Column>
+				<Column>
+					<Text text="Priority" textAlign="Center"/>
+				</Column>
+				<Column >
+					<Text text="Action"/>
+				</Column>
+			</columns>
+			<items>
+				<ColumnListItem id="Cli1">
+					<cells class="sapUiTinyMarginTop">
+						<Text text="1" class="sapUiTinyMarginTop" />
+						<Text text="Due Date" class="sapUiTinyMarginTop" />
+						<CustomListItem id ="date">
+            				<Label text="From :" class="sapUiSmallMarginTop"/>
+							<DatePicker id="DP1" change="handleChange"  width="10rem" class="sapUiTinyMarginBegin sapUiTinyMarginEnd" />
+						<Label text="To :" class="sapUiSmallMarginTop"/>
+							<DatePicker id="DP2" change="handleChange"  width="10rem" class="sapUiTinyMarginBegin"/>
+        				</CustomListItem>
+        				<CustomListItem>
+        					<ComboBox width="10rem">
+								<core:Item key="VeryHigh" text="Very High" />
+								<core:Item key="High" text="High" />
+								<core:Item key="Medium" text="Medium" />
+								<core:Item key="Low" text="Low" />
+								<core:Item key="VeryLow" text="Very Low" />
+							</ComboBox>
+        				</CustomListItem>
+						<CustomListItem>
+							<Button text = "Create" icon="sap-icon://add-filter" class="sapUiTinyMarginBegin sapUiTinyMarginEnd" press="addDateRule"/>
+							<Button text = "Update" icon="sap-icon://edit" press="updateRule"/>
+						</CustomListItem>
+					</cells>
+					</ColumnListItem>
+					<ColumnListItem>
+					<cells class="sapUiTinyMarginTop">
+						<Text text="2" class="sapUiSmallMarginTop"/>
+						<Text text="Amount" class="sapUiSmallMarginTop"/>
+						<CustomListItem>
+						<Label text="From :" class="sapUiSmallMarginTop"/>
+							<Input id="i1" class="sapUiSmallMarginBottom sapUiTinyMarginBegin sapUiTinyMarginEnd" width="10rem" change="handleChange" />
+						<Label text="To :" class="sapUiSmallMarginTop"/>
+							<Input id="i2" class="sapUiSmallMarginBottom sapUiTinyMarginBegin sapUiTinyMarginEnd" width="10rem"  />
+						</CustomListItem>
+						<CustomListItem >
+        					<ComboBox width="10rem">
+								<core:Item key="VeryHigh" text="Very High" />
+								<core:Item key="High" text="High" />
+								<core:Item key="Medium" text="Medium" />
+								<core:Item key="Low" text="Low" />
+								<core:Item key="VeryLow" text="Very Low" />
+							</ComboBox>
+        				</CustomListItem>
+						<CustomListItem >
+							<Button text = "Create" icon="sap-icon://add-filter" class="sapUiTinyMarginBegin sapUiTinyMarginEnd" press="addAmountRule"/>
+							<Button text = "Update" icon="sap-icon://edit" press="updateRule"/>
+						</CustomListItem>
+					</cells>
+					</ColumnListItem>
+					<ColumnListItem>
+					<cells class="sapUiTinyMarginTop">
+						<Text text="3" class="sapUiSmallMarginTop"/>
+						<Text text="Quantity" class="sapUiSmallMarginTop"/>
+						<CustomListItem>
+						<Label text="From :" class="sapUiSmallMarginTop"/>
+							<Input id="i3" class="sapUiSmallMarginBottom sapUiTinyMarginBegin sapUiTinyMarginEnd" width="10rem" />
+						<Label text="To :" class="sapUiSmallMarginTop"/>
+							<Input id="i4" class="sapUiSmallMarginBottom sapUiTinyMarginBegin sapUiTinyMarginEnd" width="10rem" />
+						</CustomListItem>
+						<CustomListItem >
+        					<ComboBox width="10rem">
+								<core:Item key="VeryHigh" text="Very High" />
+								<core:Item key="High" text="High" />
+								<core:Item key="Medium" text="Medium" />
+								<core:Item key="Low" text="Low" />
+								<core:Item key="VeryLow" text="Very Low" />
+							</ComboBox>
+        				</CustomListItem>
+						<CustomListItem >
+							<Button text = "Create" icon="sap-icon://add-filter" class="sapUiTinyMarginBegin sapUiTinyMarginEnd" press="addQuantityRule"/>
+							<Button text = "Update" icon="sap-icon://edit" press="updateRule"/>
+						</CustomListItem>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+		<footer>
+		  <Bar>
+		    <contentRight>
+		      <Button
+		        text="Save"
+		        press="onPressButton" />
+		        <Button
+		        text="Cancel"
+		        press="onPressButton" />
+		    </contentRight>
+		  </Bar>
+	</footer>
+	</Page>
+</mvc:View>

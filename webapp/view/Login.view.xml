@@ -1,0 +1,30 @@
+<mvc:View
+	controllerName="sap.suite.ui.commons.demokit.tutorial.icecream.01.controller.Login"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:layout="sap.ui.layout">
+	<App>
+<Page title="Login Form">
+<content>
+<VBox alignContent="Center" alignItems="Center" justifyContent="Center" fitContainer="true">
+<items>
+<Input id="uid" placeholder="User ID"/>
+<Input id="pwd" placeholder="Password" type="Password"/>
+<Button type="Emphasized" press="onSubmit" text="Login" width="12rem"/>
+<Link press="ResetPassword" text="Forgot Password?"/>
+</items>
+</VBox>
+</content>
+<footer>
+<Bar>
+<contentLeft>
+<Text text="Team 1"/>
+</contentLeft>
+<contentRight>
+<Text text="Collection Management System"/>
+</contentRight>
+</Bar>
+</footer>
+</Page>
+</App>
+</mvc:View>

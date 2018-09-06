@@ -1,0 +1,13 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	controllerName="sap.suite.ui.commons.demokit.tutorial.icecream.01.controller.Orders">
+	<Page
+		title="{i18n>ordersPageTitle}"
+		showNavButton="true"
+		navButtonPress="onNavButtonPressed"
+		backgroundDesign="Solid">
+	</Page>
+</mvc:View>

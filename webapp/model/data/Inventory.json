@@ -1,0 +1,19 @@
+{
+	"Inventory": [
+		{
+			"productName": "Chair",
+			"price": "1000",
+			"stockUnits": "true"
+		},
+			{
+			"productName": "Table",
+			"price": "2000",
+			"stockUnits": "20"
+		},
+			{
+			"productName": "Shoe Rack",
+			"price": "3000",
+			"stockUnits": "15"
+		}
+		]
+}

@@ -1,0 +1,43 @@
+<mvc:View
+	controllerName="sap.suite.ui.commons.demokit.tutorial.icecream.01.controller.Startpage"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:layout="sap.ui.layout">
+	<Page title="{i18n>title}">
+		<layout:VerticalLayout class="sapUiResponsiveMargin">
+			<Title
+				titleStyle="H2"
+				text="{i18n>startpageTilesGroupTitle}"
+				class="sapUiTinyMarginBegin" />
+			<layout:HorizontalLayout allowWrapping="true">
+				<GenericTile
+					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+					header="{i18n>startpagePFTileTitle1}"
+					press="onNavToOrders">
+				</GenericTile>
+				<GenericTile
+					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+					header="{i18n>startpagePFTileTitle2}"
+					press="onNavToInventory">
+				</GenericTile>
+				<GenericTile
+					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+					header="{i18n>startpagePFTileTitle3}"
+					press="onNavToUsers">
+				</GenericTile>
+				<GenericTile
+					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+					header="{i18n>startpagePFTileTitle4}"
+					press="onNavToRules">
+				</GenericTile>
+			</layout:HorizontalLayout>
+		</layout:VerticalLayout>
+		<content>
+            <VBox alignContent="Center" alignItems="End" justifyContent="Center" fitContainer="true">
+                <items>
+                    <Link press="onLogout" text="Logout"/>
+                </items>
+            </VBox>
+        </content>
+	</Page>
+</mvc:View>

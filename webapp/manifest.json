@@ -1,0 +1,137 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "sap.suite.ui.commons.demokit.tutorial.icecream.01",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{title}}",
+		"description": "{{appDescription}}",
+		"resources": "resources.json",
+		"ach": "ach"
+	},
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_hcw",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"rootView": {
+			"viewName": "sap.suite.ui.commons.demokit.tutorial.icecream.01.view.Login",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.50.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ui.commons": {},
+				"sap.suite.ui.microchart": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "sap.suite.ui.commons.demokit.tutorial.icecream.01.i18n.i18n"
+				}
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "sap.suite.ui.commons.demokit.tutorial.icecream.01.view",
+				"controlId": "tutorialApp",
+				"controlAggregation": "pages",
+				"transition": "slide",
+				"bypassed": {
+					"target": [
+						"Login"
+					]
+				}
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "Login",
+					"target": "Login"
+				},
+				{
+					"pattern": "Startpage",
+					"name": "Startpage",
+					"target": "Startpage"
+				}, {
+					"pattern": "Inventory",
+					"name": "Inventory",
+					"target": "Inventory"
+				}, {
+					"pattern": "Orders",
+					"name": "Orders",
+					"target": "Orders"
+				}, {
+					"pattern": "Users",
+					"name": "Users",
+					"target": "Users"
+				},
+				{
+					"pattern": "Rules",
+					"name": "Rules",
+					"target": "Rules"
+				}
+			],
+			"targets": {
+				"Login": {
+					"viewName": "Login",
+					"viewLevel": 0
+				},
+				"Startpage": {
+					"viewName": "Startpage",
+					"viewLevel": 1
+				},
+				"Orders": {
+					"viewName": "Orders",
+					"viewLevel": 1
+				},
+				"Inventory": {
+					"viewName": "Inventory",
+					"viewLevel": 1
+				},
+				"Users": {
+					"viewName": "Users",
+					"viewLevel": 1
+				},
+				"Rules": {
+					"viewName": "Rules",
+					"viewLevel": 1
+				}
+			}
+		}
+	}
+}
