@@ -10,7 +10,7 @@
 <items>
 <Input id="uid" placeholder="User ID"/>
 <Input id="pwd" placeholder="Password" type="Password"/>
-<Button type="Emphasized" press="onSubmit" text="Login" width="11rem"/>
+<Button type="Emphasized" press="onSubmit" text="Login" width="12rem"/>
 <Link press="ResetPassword" text="Forgot Password?"/>
 </items>
 </VBox>
